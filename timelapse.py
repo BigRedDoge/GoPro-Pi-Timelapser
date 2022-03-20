@@ -42,7 +42,7 @@ class Timelapse:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('name', type=int, help="The name of the folder to save timelapse to on Google Drive")
+    parser.add_argument('name', type=str, help="The name of the folder to save timelapse to on Google Drive")
     parser.add_argument('capture_int', type=int, help="The interval [in seconds] between photo captures")
     args = parser.parse_args()
     
