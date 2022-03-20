@@ -6,7 +6,7 @@ import os
 """
 TimeLapse class that handles managing the timelapse capture from GoPro
 """
-class TimeLapse:
+class Timelapse:
 
     def __init__(self, save_name, capture_int):
         # Might need GoPro IP Address and MAC Address to initialize
@@ -48,3 +48,5 @@ if __name__ == '__main__':
                         help="The interval [in seconds] between photo captures")
     args = parser.parse_args()
     
+    tl = Timelapse()
+    tl.run()
