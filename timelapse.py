@@ -10,7 +10,7 @@ class Timelapse:
 
     def __init__(self, save_name, capture_int):
         # Might need GoPro IP Address and MAC Address to initialize
-        self.gopro = GoProCamera.GoPro()
+        self.gopro = GoProCamera.GoPro(camera='detect')
         self.interval = capture_int
         self.COUNT = 0
         self.save_name = save_name
@@ -42,10 +42,8 @@ class Timelapse:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('name', type=int, required=True, 
-                        help="The name of the folder to save timelapse to on Google Drive")
-    parser.add_argument('capture_int', type=int, required=True, 
-                        help="The interval [in seconds] between photo captures")
+    parser.add_argument('name', type=int, help="The name of the folder to save timelapse to on Google Drive")
+    parser.add_argument('capture_int', type=int, help="The interval [in seconds] between photo captures")
     args = parser.parse_args()
     
     tl = Timelapse()
