@@ -16,7 +16,7 @@ class Timelapse:
         self.save_name = save_name
         # Create folder to save locally
         self.save_path = os.path.join(os.getcwd(), save_name)
-        os.makedir(self.save_path)
+        os.makedirs(self.save_path)
 
         # thread pool of Google Drive savers
         
