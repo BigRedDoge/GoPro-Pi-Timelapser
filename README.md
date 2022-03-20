@@ -8,14 +8,19 @@ Continuously saves timelapses from a GoPro to a Raspberry Pi that saves it to Go
 
 * [PyDrive2](https://github.com/iterative/PyDrive2)
 
+Update settings.yaml in the config folder with your Google Drive Credentials
 
-Design Plan
+## Installation
 
-1. Specify valid arguments for timelapse parameters (name of time lapse, length to record), and Google Drive config json
+> pip install -r requirements.txt
 
-2. Create new folder in Google Drive to save new timelapse footage
+## Design Plan
 
-3. Start timelapse and save images according to timer
+1. [x] Specify valid arguments for timelapse parameters (name of time lapse, length of frame interval), and Google Drive settings yaml
 
-4. On each save, upload to Google Drive on a new thread
+2. [ ] Create new folder in Google Drive to save new timelapse footage
+
+3. [x] Start timelapse and save images to timelapse directory according to timer
+
+4. [ ] On each save, upload to Google Drive on a new thread
 
