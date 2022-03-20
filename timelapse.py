@@ -46,5 +46,5 @@ if __name__ == '__main__':
     parser.add_argument('capture_int', type=int, help="The interval [in seconds] between photo captures")
     args = parser.parse_args()
     
-    tl = Timelapse()
+    tl = Timelapse(args.name, args.capture_int)
     tl.run()
