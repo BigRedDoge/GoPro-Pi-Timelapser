@@ -1,4 +1,5 @@
 from goprocam import GoProCamera
+from goprocam import constants
 import argparse
 import keyboard
 import os
@@ -10,7 +11,7 @@ class Timelapse:
 
     def __init__(self, save_name, capture_int):
         # Might need GoPro IP Address and MAC Address to initialize
-        self.gopro = GoProCamera.GoPro(camera='detect')
+        self.gopro = GoProCamera.GoPro(camera='HERO4 Black', webcam_device="usb9")
         self.interval = capture_int
         self.COUNT = 0
         self.save_name = save_name
